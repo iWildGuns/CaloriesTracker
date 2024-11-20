@@ -2,7 +2,7 @@ import { useEffect, useReducer } from "react";
 import { activityReducer, initialState } from "./reducers/activityReducers";
 import Form from "./components/Form";
 import ActivityList from "./components/ActivityList";
-import CaloryTracker from "./components/CaloryTracker";
+import CaloryTracker from "./components/CaloriesTracker";
 
 function App() {
   const [state, dispatch] = useReducer(activityReducer, initialState);
@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <header className=" bg-lime-600 py-3">
-        <div className=" max-w-4xl mx-auto flex justify-between">
+        <div className=" max-w-4xl mx-auto flex justify-between items-center">
           <h1 className="text-center text-lg font-bold text-white uppercase">
             Calories Tracker
           </h1>
@@ -37,7 +37,7 @@ function App() {
 
       <section className="bg-gray-800 p-10">
         <div className=" max-w-4xl mx-auto">
-          <CaloryTracker />
+          <CaloryTracker activities={state.activities} />
         </div>
       </section>
 
