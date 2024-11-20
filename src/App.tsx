@@ -25,7 +25,7 @@ function App() {
             disabled={!canRestartApp}
             onClick={() => dispatch({ type: "restartApp" })}
           >
-            Reiniciar App
+            Restart App
           </button>
         </div>
       </header>
